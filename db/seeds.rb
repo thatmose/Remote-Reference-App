@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do |customer|
+  Customer.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.unique.last_name, mobile_number: Faker::PhoneNumber.unique.cell_phone, id_number: Faker::Number.unique.number(8) )
+end
