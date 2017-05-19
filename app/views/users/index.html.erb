@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="search-customers">
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
+
+  <div class="debt-report">
+    <p>Hello World!</p>
+  </div>
+</div>
