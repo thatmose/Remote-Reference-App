@@ -9,3 +9,7 @@
 20.times do |customer|
   Customer.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.unique.last_name, mobile_number: Faker::Base.numerify("17########"), id_number: Faker::Number.unique.number(8) )
 end
+
+10.times do |debt|
+  Debt.create!(customer_id: Faker::Number.between(1,20), amount_borrowed: Faker::Number.number(5), amount_paid: Faker::Number.number(3), interest_rate: Faker::Number.between(7,14), loan_duration: Faker::Number.between(6,36))
+end
