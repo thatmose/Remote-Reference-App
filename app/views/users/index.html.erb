@@ -1,8 +1,8 @@
 <div class="container">
   <div class="search-customers">
-    <%= form_tag("/search", method: "get") do %>
+    <%= form_tag(customers_path, method: "get") do %>
       <%= label_tag(:q, "Search for a customer:") %>
-      <%= text_field_tag(:q) %>
+      <%= text_field_tag(:q, nil, placeholder: "Enter id or mobile number") %>
       <%= submit_tag("Search") %>
     <% end %>
   </div>
