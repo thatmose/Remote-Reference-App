@@ -1,0 +1,23 @@
+<div class="table">
+  <table>
+    <tr>
+      <th>Customer_id</th>
+      <th>Amount Borrowed (KES)</th>
+      <th>Amount Paid (KES)</th>
+      <th>Interest Rate (%)</th>
+      <th>Loan Duration (months)</th>
+    </tr>
+    <% @debtors.each do |debtor| %>
+      <tr>
+        <th><%= debtor.customer_id %></th>
+        <th><%= debtor.amount_borrowed %></th>
+        <th><%= debtor.amount_paid %></th>
+        <th><%= debtor.interest_rate %></th>
+        <th><%= debtor.loan_duration %></th>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<div class="container">
+  <%= link_to("Return to Home Page", users_path ) %>
+</div>
