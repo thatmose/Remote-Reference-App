@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Debtors") do |sheet|
+  sheet.add_row ["Customer_id", "Amount Borrowed (KES)", "Amount Paid (KES)", "Interest Rate (%)", "Loan Duration (months)"]
+  @debtors.each do |debtor|
+    sheet.add_row [debtor.customer_id, debtor.amount_borrowed, debtor.amount_paid, debtor.interest_rate,
+    debtor.loan_duration]
+  end
+end

@@ -7,6 +7,8 @@ end
 
 # Faker to generate data for demo
 gem 'faker'
+# Generate Excel file downloads
+gem 'axlsx_rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
